@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb2
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.251\"]"
+spec:
+   containers:
+   - name: enb2
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+     

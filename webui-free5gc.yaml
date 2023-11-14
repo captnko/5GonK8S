@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: webui
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.101\"]"
+spec:
+   containers:
+   - name: webui
+     image: captnko/webui-free5gc
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "cd /open5gs/webui; npm run dev; while true; do sleep 30; done;" ]

@@ -1,0 +1,607 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb1
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.253\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb2
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.251\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb3
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.249\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb4
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.247\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb5
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.245\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb6
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.243\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb7
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.241\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb8
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.239\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb9
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.237\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb10
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.235\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb11
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.233\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb12
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.231\"]"
+spec:
+   containers:
+   - name: enb12
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb13
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.229\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb14
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.227\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb15
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.225\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb16
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.223\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb17
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.221\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb18
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.219\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb19
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.217\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb20
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.215\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb21
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.213\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb22
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.211\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb23
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.209\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb24
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.207\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb25
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.205\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb26
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.203\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb27
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.201\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb28
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.199\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb29
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.197\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb30
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.195\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb31
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.193\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+   name: enb32
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.191\"]"
+spec:
+   containers:
+   - name: enb1
+     image: captnko/enb-f5g
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args: [ "while true; do sleep 30; done;" ]

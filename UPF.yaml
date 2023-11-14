@@ -1,0 +1,63 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: upf-service
+spec:
+  selector:
+    app: upf
+# type: ClusterIP
+  clusterIP: 10.43.0.2
+  ports:
+  - name: enb
+    port: 38819
+    protocol: UDP
+  - name: smf
+    port: 8805
+    protocol: UDP
+#    port: 36412
+#    protocol: SCTP
+#    nodePort: 36412
+#  - port: 2152
+#    protocol: TCP 
+#  externalIPs:
+#    - 192.186.4.2       
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: upf
+  labels:
+    app: upf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: upf
+  template:
+    metadata:
+      labels:
+        app: upf
+    spec:
+      containers:
+       - name: upf
+         image: captnko/upf
+         securityContext:
+          privileged: true
+          capabilities:
+            add:
+              - NET_ADMIN
+         # to keep running and ready
+         command: [ "/bin/bash", "-c", "--" ]
+         args:
+           - sysctl -w net.ipv6.conf.all.disable_ipv6=0;
+             sysctl -w net.ipv4.ip_forward=1;
+             bash /open5gs/runEPC.sh;
+             while true;
+             do sleep 30;
+             done;
+      volumes:            
+        - name: dev-net-tun
+          hostPath:
+            path: /dev/net/tun
+     
+     

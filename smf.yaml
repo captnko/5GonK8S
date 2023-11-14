@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: smf
+   annotations:
+     cni.projectcalico.org/ipAddrs: "[\"192.187.3.3\"]"
+spec:
+   containers:
+   - name: smf
+     image: captnko/smf
+     securityContext:
+      privileged: true
+      capabilities:
+        add:
+          - NET_ADMIN
+     # to keep running and ready
+     command: [ "/bin/bash", "-c", "--" ]
+     args:
+       - while true;
+         do sleep 30;
+         done;
+     
