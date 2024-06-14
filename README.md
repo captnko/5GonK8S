@@ -38,7 +38,7 @@ Then configure Calico netowrking as described on official website: https://www.p
 
 The images used as base for the Docker container images are: https://github.com/LABORA-INF-UFG/NetSoft2020-Tutorial4
 
-They have been modified and re-uploaded to Docker Hub, then used for the Kubernetes manifests to deploy 4G components.
+They have been modified and re-uploaded to Docker Hub, then used for the Kubernetes manifests to deploy 5G components.
 
 Use manifests with "kubectl apply -f <<name_of_manifest.yaml>>" to deploy 5G components.
 
